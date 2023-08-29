@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Negeri 2 Lamongan</title>
+    <link rel = "icon" href = "logo.png">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<header>
+    <img src="cropped-logo-fix-ok.gif" alt="" srcset="" id="logo">
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Our Profile</a>
+        <a href="">Achievement</a>
+        <a href="">Message Us</a>
+    </nav>
+</header>
+<main>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Masukkan Nama Anda</h2>
+            <input type="text" id="namaInput" placeholder="Nama">
+            <button id="submitBtn">Submit</button>
+        </div>
+    </div>
+    <section class="landing-page" id="landingPage">
+        <div class="banner">
+            <div id="banner-msg">
+                <h1 id="welcomeMessage">Hai</h1>
+                <h4 >Selamat Datang di Website SMA Negeri 2 Lamongan</h4>
+            </div>
+        </div>
+    </section>
+    <section >
+        <h2 style="padding-left: 15px;">Our Facilities</h2>
+        <div class="facilities">
+            <div class="facility">
+                <img src="fasilitas-1.jpg" alt="Fasilitas 1">
+                <h4>Ruang Kelas Rindang</h4>
+            </div>
+            <div class="facility">
+                <img src="fasilitas-2.jpg" alt="Fasilitas 2">
+                <h4>Masjid Besar</h4>
+            </div>
+            <div class="facility">
+                <img src="fasilitas-3.jpg" alt="Fasilitas 3">
+                <h4>Lapangan Olahraga</h4>
+            </div>
+            <div class="facility">
+                <img src="fasilitas-4.jpg" alt="Fasilitas 4">
+                <h4>Sekolah Bersih & Rapi</h4>
+            </div>
+        </div>
+
+    </section>
+    <section class="form-section">
+        <form name="message-form" onsubmit="return validateForm()" class="form-container">
+            <table>
+                <tr>
+                  <td><label for="full-name">Nama</label></td>
+                  <td>:</td>
+                  <td><input type="text" name="full-name" id="full-name" placeholder="Nama" /></td>
+                </tr>
+                <tr>
+                  <td><label for="birth-date">Tanggal Lahir</label></td>
+                  <td>:</td>
+                  <td><input type="date" name="birth-date" id="birth-date" /></td>
+                </tr>
+                <tr>
+                  <td><label>Jenis Kelamin</label></td>
+                  <td>:</td>
+                  <td>
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">Perempuan</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="messages">Pesan</label></td>
+                  <td>:</td>
+                  <td><textarea name="messages" id="messages" placeholder="Pesan"></textarea></td>
+                </tr>
+              </table>
+            <button type="submit">Submit</button>
+            <p id="error-name"></p>
+        </form>
+        <div class="result-container">            
+            <p>Currente Time: <span id="sender-current-time"></span></p><br>
+            <p>Nama : <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+            <p>Pesan : <span id="sender-messages"></span></p>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</main>
+<footer>
+    Created By Faridz.ter
+</footer>
+</html>
