@@ -9,12 +9,10 @@ header{
 #logo{
     width: 25%;
 }
-/* Add a black background color to the top navigation */
 .navbar {
+    display: flex;
     overflow: hidden;
 }
-
-/* Style the links inside the navigation bar */
 .navbar a {
     border-radius: 8px;
     float: left;
@@ -24,13 +22,10 @@ header{
     text-decoration: none;
     font-size: 17px;
 }
-
-/* Change the color of links on hover */
 .navbar a:hover {
     background-color: #272727;
     color: rgb(218, 218, 218);
 }
-
 .popup {
     display: none;
     position: fixed;
@@ -57,8 +52,7 @@ header{
     border-radius: 8px;
     width: 1366px;
     height: 578px;
-    background-image: url('../banner.png'); /* Ganti dengan path gambar Anda */
-    background-size: cover;
+    background-image: url('../banner.png');
     background-position: center;
 }
 #welcomeMessage{
@@ -69,7 +63,7 @@ header{
     left: 5%;
     top: 18%;
     padding: 20px;
-    color: white; /* Warna teks putih */
+    color: white;
 }
 .facilities {
     display: flex;
@@ -86,13 +80,14 @@ header{
 .facility img {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Membuat gambar bundar */
+    border-radius: 50%;
     object-fit: cover;
 }
 .facility h3 {
     margin-top: 10px;
 }
 .form-section {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -110,50 +105,76 @@ header{
     border: 1px solid #ccc;
     border-radius: 8px;
 }
-/* Styling for the form section */
-  
-  /* Styling for form inputs and textarea */
-  .form-container input[type="text"],
-  .form-container input[type="date"],
-  .form-container textarea {
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  /* Styling for radio buttons and labels */
-  .form-container input[type="radio"] {
+}
+.form-container input[type="radio"] {
     margin-right: 5px;
-  }
-  
-  /* Styling for submit button */
-  .form-container button[type="submit"] {
+}
+.form-container button[type="submit"] {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  /* Styling for error message */
-  #error-name {
+}
+.radio-container{
+    display: flex;
+}
+.form-container button[type="submit"] {
+    display: block; 
+    margin: 0 auto; 
+}
+#error-name {
     color: red;
     font-size: 14px;
     margin-top: 5px;
-  }
-  
- 
-  /* Styling for each result line */
-  .result-container p {
+}
+.result-container p {
     margin: 5px 0;
     font-weight: bold;
-  }
-  
-  /* Styling for the labels in the result */
-  .result-container span {
+}
+.result-container span {
     font-weight: normal;
-  }
-  
+}
+footer{
+    text-align: center;
+    padding: 15px 0px;
+}
+@media only screen and (max-width: 600px) {
+    .popup {
+        position: absolute;
+    }
+    #logo{
+        width: auto;
+        height: 20%;
+    }
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    header,  .navbar,  .facilities{
+        flex-direction: column;
+    }
+    #banner-msg{
+        top: auto;
+        left: auto;
+    }
+    .form-section{
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-container,.form-container button[type="submit"], .result-container{
+        width: 85%;
+    }
+}
